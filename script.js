@@ -154,6 +154,8 @@ function finishQuiz() {
     }
 }
 
+
+// Reset variables and texts
 function resetEvent() {
     correctAnswers = 0;
     currentQueston = 0;
