@@ -91,21 +91,15 @@ function optionClickEvent(e) {
 
         // POINTS TEAM
         if (currentQueston % 2 === 0 ) {
-            
-            console.log('if diferente par');
 
             doc('.team-1-points').innerHTML = `Pontuação: ${scoreT1 }`;
 
             doc('.turn-team').innerHTML = "Vez da equipe 2 ";    
         }
         if(currentQueston % 2 === 1){
-            
-
             doc('.team-2-points').innerHTML = `Pontuação: ${scoreT2 }`
             doc('.turn-team').innerHTML = "Vez da equipe 1";
-            console.log('if diferente impar');
         }
-        console.log('if sdfsdfsdfsdf');
     }
     
 
