@@ -18,5 +18,42 @@ let quiz = [
         answer: 2,
         descriptions: '(Jz 16:18) Quando Dalila viu que ele lhe tinha aberto o coração, imediatamente mandou chamar os governantes filisteus, dizendo: “Venham, pois desta vez ele abriu o coração para mim.” Assim, os governantes filisteus foram até ela, levando o dinheiro. ”'
     },
+    {
+        question:'Qual era a idade de Nóe quando o dilúviu veio sobre a terra? ',
+        options:['500 Anos', '450 Anos', '700 Anos', '600 Anos'],
+        answer: 3,
+        descriptions:'(Gên 7:6)Noé tinha 600 anos de idade quando o dilúvio de águas veio sobre a terra. ',
+    },
+    {
+        question:'De qual país era o homem de que no caminho de Gólgota "o chamado Lugar da Caveira", puseram a estaca sobre ele para que a carregasse atrás de Jesus',
+        options:['Cirene', 'Rabá', 'Mesoppotâmia', 'Egito'],
+        answer: 0,
+        descriptions:'(Lu 23:26) Enquanto o levavam embora, agarraram um certo Simão de Cirene, que vinha do campo, e puseram a estaca sobre ele para que a carregasse atrás de Jesus. ',
+    },
+    {
+        question:'',
+        options:['', '', '', ''],
+        answer: 3,
+        descriptions:'(Gên 7:6) ',
+    },
+    {
+        question:'',
+        options:['', '', '', ''],
+        answer: 3,
+        descriptions:'(Gên 7:6) ',
+    },
+    {
+        question:'',
+        options:['', '', '', ''],
+        answer: 3,
+        descriptions:'(Gên 7:6) ',
+    },
+    {
+        question:'',
+        options:['', '', '', ''],
+        answer: 3,
+        descriptions:'(Gên 7:6) ',
+    },
+    
     
 ]

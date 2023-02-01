@@ -7,9 +7,14 @@ const docAll = (el) =>(document.querySelectorAll(el));
 let descriptionHtml = '';
 let currentQueston = 0;
 let correctAnswers = 0;
-let score = 0;
+let scoreT1 = 0;
+let scoreT2 = 0;
 
+
+// events click
 doc('.scoreArea button').addEventListener('click', resetEvent)
+
+// doc('.btn-tean-1').addEventListener('click', scoreTeam1)
 
 showQuestion();
 
@@ -54,17 +59,56 @@ function optionClickEvent(e) {
     
     let clickedOption = parseInt(e.target.getAttribute('data-op'));
     
-    
-    
+    doc('.scocre-pts').innerHTML = '';    
     
     if (quiz[currentQueston].answer === clickedOption) {
         
-        score += 10
         docAll('.option')[clickedOption].style.background = '#1d1c26';
-        doc('.scocre-pts').innerHTML = `Pontos: ${score}`
-        correctAnswers++;      
+        correctAnswers++;  
+        doc('.scocre-pts').innerHTML = 'Correto';
         
-    } 
+        // POINTS TEAM
+        if (currentQueston % 2 === 0 ) {
+            scoreT1 +=10;
+
+            doc('.team-1-points').innerHTML = `Pontuação: ${scoreT1 }`;
+
+            doc('.turn-team').innerHTML = "Vez da equipe 2 ";    
+        }
+        if(currentQueston % 2 === 1  ){
+            scoreT2 +=10;
+
+            doc('.team-2-points').innerHTML = `Pontuação: ${scoreT2 }`
+            doc('.turn-team').innerHTML = "Vez da equipe 1";
+        }
+        
+    }
+    // OPTION QUETIONS NOT CORRECTS
+    else if (quiz[currentQueston].answer !== clickedOption) {
+
+        docAll('.option')[clickedOption].style.background = '#1d1c26';
+        doc('.scocre-pts').innerHTML = 'Errado';
+
+        // POINTS TEAM
+        if (currentQueston % 2 === 0 ) {
+            
+            console.log('if diferente par');
+
+            doc('.team-1-points').innerHTML = `Pontuação: ${scoreT1 }`;
+
+            doc('.turn-team').innerHTML = "Vez da equipe 2 ";    
+        }
+        if(currentQueston % 2 === 1){
+            
+
+            doc('.team-2-points').innerHTML = `Pontuação: ${scoreT2 }`
+            doc('.turn-team').innerHTML = "Vez da equipe 1";
+            console.log('if diferente impar');
+        }
+        console.log('if sdfsdfsdfsdf');
+    }
+    
+
     if (currentQueston >= quiz.length) {
         // currentQueston = 0;
         finishQuiz(); 
@@ -74,6 +118,8 @@ function optionClickEvent(e) {
     }  
     currentQueston++;
     showQuestion()  
+    
+
 }
 
 function finishQuiz() {
@@ -87,11 +133,11 @@ function finishQuiz() {
 
     doc('.scoreText2').innerHTML = `Você respondeu ${quiz.length} Questões e acertou ${correctAnswers}.`
     
-    if (points <= 0 && points <= 33 ) {
+    if (points >= 0 && points <= 32 ) {
         doc('.scoreText1').innerHTML = "você foi muito Mal Precisa Melhorar!"
         doc('.scorePct').style.color = 'red'
     }
-    else if(points >= 34 && points <= 65) {
+    else if(points >= 33 && points <= 65) {
         doc('.scoreText1').innerHTML = "Muito bem mas precisa melhorar!"
         doc('.scorePct').style.color = 'yellow'
         
@@ -111,8 +157,42 @@ function finishQuiz() {
 function resetEvent() {
     correctAnswers = 0;
     currentQueston = 0;
+    scoreT1 = 0;
+    scoreT2 = 0;
+
+    doc('.scocre-pts').innerHTML = 'Vamos Começar?'; 
+
+    doc('.team-1-points').innerHTML = `Pontuação: ${ scoreT1 }`;
+    doc('.team-2-points').innerHTML = `Pontuação: ${ scoreT2 }`;
+
+    doc('.turn-team').innerHTML = "Equipe 1 inicia";
     showQuestion();
 }
+
+// score and tean points
+
+// function scoreTeam() {
+
+    
+//     if (currentQueston % 2 === 0 && correctAnswers) {
+//         scoreT1 +=10;
+//         // log(currentQueston, 'no if')
+        
+//         doc('.team-1-points').innerHTML = `Pontuação: ${scoreT1 }`
+//         log(correctAnswers)
+        
+//     }
+//     else if(currentQueston % 2 !== 0  && correctAnswers){
+//         scoreT2 +=10;
+//         log('no else')
+        
+//         doc('.team-2-points').innerHTML = `Pontuação: ${scoreT1 }`
+//     }
+    
+    
+// }
+
+
 
 // function questionsRandom() {
 //     let max = quiz.length;
@@ -123,7 +203,6 @@ function resetEvent() {
 
 // }
 // questionsRandom()
-
 
 
 
