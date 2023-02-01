@@ -121,7 +121,7 @@ function optionClickEvent(e) {
     
 
 }
-
+// conditionals text congratulations
 function finishQuiz() {
     let points = Math.floor((correctAnswers / quiz.length) * 100);
 
