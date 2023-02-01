@@ -18,7 +18,7 @@ doc('.scoreArea button').addEventListener('click', resetEvent)
 
 showQuestion();
 
-//Functions
+//Function show quetions
 function showQuestion() {
     if (quiz[currentQueston]) {
         let q = quiz[currentQueston];
@@ -32,25 +32,18 @@ function showQuestion() {
 
         doc('.question').innerHTML = q.question;
         
-
         let optionsHtml = '';
         
         for (let i in q.options) {
-            optionsHtml += `<div data-op="${i}" class="option"><span>${parseInt(i)+1}</span> ${q.options[i]}</div>`;       
-            
-        }
-
-        
-        
+            optionsHtml += `<div data-op="${i}" class="option"><span>${parseInt(i)+1}</span> ${q.options[i]}</div>`;         
+        }  
         doc('.options').innerHTML = optionsHtml;
-
         document.querySelectorAll('.options .option').forEach(item => {
             item.addEventListener('click', optionClickEvent);
         });
     } 
     else {
        finishQuiz()
-       
     }
 }
 // Opções e respostas
