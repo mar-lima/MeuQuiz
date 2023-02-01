@@ -226,6 +226,8 @@ footer {
     font-size: 13px;
 }
 
+/* Responsive area */
+
 @media (max-width: 300px ) {
     .cotainer {
         display: none;
@@ -343,3 +345,4 @@ footer {
     
     
 }
+
