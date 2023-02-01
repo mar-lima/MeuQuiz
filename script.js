@@ -83,7 +83,7 @@ function optionClickEvent(e) {
         }
         
     }
-    // OPTION QUETIONS NOT CORRECTS
+    // OPTION QUETIONS NOT CORRECTS 
     else if (quiz[currentQueston].answer !== clickedOption) {
 
         docAll('.option')[clickedOption].style.background = '#1d1c26';
