@@ -193,7 +193,7 @@ function resetEvent() {
 // }
 
 
-
+//funtion random not used
 // function questionsRandom() {
 //     let max = quiz.length;
 //     const random = (min, ) => Math.floor(Math.random()  * (min));
