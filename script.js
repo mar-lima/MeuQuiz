@@ -54,9 +54,8 @@ function showQuestion() {
     }
 }
 // Opções e respostas
-
-function optionClickEvent(e) {
-    
+// options corrects questions
+function optionClickEvent(e) {  
     let clickedOption = parseInt(e.target.getAttribute('data-op'));
     
     doc('.scocre-pts').innerHTML = '';    
@@ -72,7 +71,6 @@ function optionClickEvent(e) {
             scoreT1 +=10;
 
             doc('.team-1-points').innerHTML = `Pontuação: ${scoreT1 }`;
-
             doc('.turn-team').innerHTML = "Vez da equipe 2 ";    
         }
         if(currentQueston % 2 === 1  ){
@@ -80,8 +78,7 @@ function optionClickEvent(e) {
 
             doc('.team-2-points').innerHTML = `Pontuação: ${scoreT2 }`
             doc('.turn-team').innerHTML = "Vez da equipe 1";
-        }
-        
+        }   
     }
     // OPTION QUETIONS NOT CORRECTS 
     else if (quiz[currentQueston].answer !== clickedOption) {
