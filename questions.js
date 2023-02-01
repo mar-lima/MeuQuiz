@@ -31,10 +31,10 @@ let quiz = [
         descriptions:'(Lu 23:26) Enquanto o levavam embora, agarraram um certo Simão de Cirene, que vinha do campo, e puseram a estaca sobre ele para que a carregasse atrás de Jesus. ',
     },
     {
-        question:'',
-        options:['', '', '', ''],
-        answer: 3,
-        descriptions:'(Gên 7:6) ',
+        question:'Quem era o personagem usando apenas uma roupa de linho fino no dia da prisão de Jesus?',
+        options:['Um velho', 'Um jovem', 'Uma jovem', 'Sua Mãe'],
+        answer: 1,
+        descriptions:'(Mr 14:51)No entanto um jovem, usando apenas uma roupa de linho fino por cima do corpo nu, começou a segui-lo de perto, e tentaram prendê-lo, ',
     },
     {
         question:'',
