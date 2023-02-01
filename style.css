@@ -6,13 +6,14 @@
 
 body {
     display: flex;
-    min-height: 100vh;
-    min-width: 100vw;
+    /* min-height: 100vh; */
+    /* max-width: 90vw; */
     justify-content: center;
     align-items: center;
     flex-direction: column;
     background-color: #333;
     font-family: Arial, Helvetica, sans-serif;
+    margin: 0 auto;
     overflow: hidden;
 }
 .cotainer {
@@ -20,10 +21,10 @@ body {
     align-items: center;
     flex-direction: column;
     min-width: 450px;
-    width: 100%;
-    height: 100vh;
+    /* width: 90vw; */
+    /* height: 100vh; */
     /* background-color: #2b2e09; */
-    /* overflow: hidden; */
+    padding: 15px;
 }
 /* .contain-area {
     display: flex;
@@ -48,10 +49,10 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin: 0 100px;
+    /* margin: 0 100px; */
     height: 100%;
     /* background-color: rgb(131, 65, 65) */
-    font-size: 30px;
+    font-size: 22px;
     font-weight: 800;
 }
 .team-1 {
@@ -223,4 +224,122 @@ footer {
     margin-top: 20px;
     color: #FFF;
     font-size: 13px;
+}
+
+@media (max-width: 300px ) {
+    .cotainer {
+        display: none;
+    }
+    
+}
+@media (min-width: 300px ) {
+    .cotainer {
+        min-width: 100px;
+        max-width: 550px;
+        width: 100%;
+        padding: 5px;
+    }
+    .team {
+        
+        justify-content: space-between;
+        min-width: 200px;
+        width: 100%;
+        
+    }
+    span, .scocre-pts {
+     font-size: 14px;
+    } 
+    .team-1-points, .team-2-points {
+        margin-top: 5px;
+        font-size: 10px;
+    }
+    .questionArea {   
+        width: 100%;
+    }
+    .question {
+        font-size: 14px;
+    }
+    .option {
+        width: 100%;
+        font-size: 14px;
+    }
+    .option span {
+        font-size: 14px;
+    }
+}
+
+
+@media (min-width: 650px) {
+    .cotainer {
+        min-width: 400px;
+        max-width: 750px;
+        width: 100%;
+        padding: 50px;
+    }
+    .team {
+        justify-content: space-between;
+        min-width: 400px;
+        width: 100%;    
+    }
+    span, .scocre-pts {
+     font-size: 18px;
+    } 
+    .team-1-points, .team-2-points {
+        margin-top: 10px;
+        font-size: 15px;
+    }
+    .questionArea { 
+        width: 100%;
+    }
+    .question {
+        font-size: 22px;
+    }
+    .option {
+        width: 100%;
+        font-size: 22px;
+    }
+    .option span {
+        font-size: 22px;
+    }
+    
+ }
+
+@media (min-width: 1024px) {
+        
+    .cotainer {
+        width: 100%;
+        max-width: 1024px;
+        min-width: 500px;
+        width: 100vw;
+        padding: 50px;
+    }
+    .team {
+        
+        justify-content: space-between;
+        min-width: 400px;
+        width: 100%;
+        
+    }
+    span, .scocre-pts {
+     font-size: 22px;
+    } 
+    .team-1-points, .team-2-points {
+        margin-top: 10px;
+        font-size: 20px;
+    }
+    .questionArea { 
+        width: 100%;
+    }
+    .question {
+        font-size: 22px;
+    }
+    .option {
+        width: 100%;
+        font-size: 22px;
+    }
+    .option span {
+        font-size: 22px;
+    }
+    
+    
 }
